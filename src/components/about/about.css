@@ -1,0 +1,93 @@
+.aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15%;
+}
+.aboutMe{
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    display: flex;
+    place-items: center;
+}
+
+.aboutMeImage{
+    border-radius: 20px;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+.aboutMeImage:hover{
+    transform: rotate(0);
+}
+.aboutCards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.aboutCard{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.aboutCard:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+.aboutIcon{
+    color: var(--color-primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.aboutCard h5{
+    font-size: 15px;
+}
+.aboutCard small{
+    font-size: 10px;
+    color: var(--color-light);
+}
+.aboutContent p {
+    margin: 20px 0 26px;
+    color: var(--color-light);
+}
+
+@media screen and (max-width: 1024px){
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .aboutMe{
+        width: 50%;
+        margin: 20px auto 40px;
+        padding: 10px;
+    }
+    .aboutContent p{
+        margin: 10px 0 15px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .aboutMe{
+        width: 65%;
+        margin: 0 auto 30px;
+    }
+    .aboutCards{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .aboutContent{
+        text-align: center;
+    }
+    .aboutContent p{
+        margin: 15px 0;
+    }
+}
